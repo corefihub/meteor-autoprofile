@@ -3,7 +3,7 @@
 
 ## Disclaimer
 
-!WIP, the current version is 0.1.4!
+!WIP, the current version is 0.1.5!
 
 ## Features
 
@@ -13,7 +13,7 @@
 
 ## Installation
 
-    $ meteor add d3k4y:meteor-autoprofile
+    $ meteor add sebl29:meteor-autoprofile
     
 There are some optional dependencies that you could install to extend the functionality (at least one of them is required to enable editing):
 
