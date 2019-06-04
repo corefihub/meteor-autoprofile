@@ -6,6 +6,10 @@ Template.autoProfileFieldHelper_editable.helpers({
     isEditable() {
         if (this.fieldOptions && this.fieldOptions.value) { return false; }
         const fieldOptions = Template.instance().data.fieldOptions;
-        return fieldOptions && (typeof fieldOptions.editable === 'undefined' || fieldOptions.editable);
+        return fieldOptions && (typeof fieldOptions.editable === 'undefined' || fieldOptions.editable)
+            && this.editingEnabled;
+    },
+    isMultiline() {
+        return !!this.isMultiline && this.isMultiline;
     }
 });
