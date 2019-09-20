@@ -69,6 +69,7 @@
               {{#each fields}}
                 <div class="card">
                   <div class="card-body">
+                    {{!-- <h6 class="">{{fieldTitle}}</h6> --}}
                     {{> DynamicTemplate template=getTemplate data=this}}
                   </div>
                 </div>
@@ -102,7 +103,8 @@
 
           {{#with field}}
             {{#if group}}
-              <li class="list-group-item text-right"><span class="pull-left"><strong>{{fieldTitle}}</strong></span>
+              <li class="list-group-item text-right">
+                <span class="pull-left"><strong>{{fieldTitle}}</strong></span>
                 {{#each group}}
                   {{> DynamicTemplate template=getTemplate data=this}}
                 {{/each}}

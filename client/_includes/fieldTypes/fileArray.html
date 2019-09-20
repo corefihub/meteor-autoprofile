@@ -1,9 +1,9 @@
-<template name="autoProfileField_fileCheckArray">
+<template name="autoProfileField_fileArray">
   {{#if fieldValue}}
     <h6 class="">{{fieldTitle}}</h6>
     {{#each value in fieldValue}}
       {{#if getLinkArray value}}
-        <span class="float-right icon-check cf-icon cf-icon-big"> </span>
+        <span class="icon-{{getIconType value}}"> </span>
         <a class="{{getClass value}}" href="{{getLinkArray value}}">
           {{#if enumerateFiles}}
             File {{plusOne @index}}
@@ -15,6 +15,6 @@
       {{/if}}
     {{/each}}
   {{else}}
-    <span class="float-right icon-cross cf-icon cf-icon-big cf-icon__no-hover"> </span> {{fieldTitle}}
+  <h6 class="">{{fieldTitle}}</h6>
   {{/if}}
 </template>

@@ -23,6 +23,7 @@ Template.autoProfilePanel.helpers({
         }
     },
     getTemplate() {
+        // console.info(`autoProfilePanel#getTemplate: `, getTemplate(Template.instance(), this));
         return getTemplate(Template.instance(), this);
     },
     doShowLoadingSpinner() {

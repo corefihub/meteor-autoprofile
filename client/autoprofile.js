@@ -22,6 +22,8 @@ import './_includes/fieldTypes/fileCheck.html';
 import './_includes/fieldTypes/fileCheck.js';
 import './_includes/fieldTypes/fileCheckArray.html';
 import './_includes/fieldTypes/fileCheckArray.js';
+import './_includes/fieldTypes/fileArray.html';
+import './_includes/fieldTypes/fileArray.js';
 import './_includes/fieldTypes/date.html';
 import './_includes/fieldTypes/object.html';
 import './_includes/fieldTypes/object.js';
@@ -97,6 +99,7 @@ Template.autoProfileField_image.inheritsHelpersFrom('autoProfileField_string');
 Template.autoProfileField_file.inheritsHelpersFrom('autoProfileField_string');
 Template.autoProfileField_fileCheck.inheritsHelpersFrom('autoProfileField_string');
 Template.autoProfileField_fileCheckArray.inheritsHelpersFrom('autoProfileField_string');
+Template.autoProfileField_fileArray.inheritsHelpersFrom('autoProfileField_string');
 Template.autoProfileField_date.inheritsHelpersFrom('autoProfileField_string');
 Template.autoProfileField_string_textarea.inheritsHelpersFrom('autoProfileField_string');
 Template.autoProfileField_array.inheritsHelpersFrom('autoProfileField_string');
@@ -106,6 +109,7 @@ Template.autoProfileField_string_reference.inheritsHelpersFrom('autoProfileField
 Template.autoProfileField_fileReference.inheritsHelpersFrom('autoProfileField_string');
 
 Template.autoProfileField_fileCheckArray.inheritsHelpersFrom('autoProfileField_fileCheck');
+Template.autoProfileField_fileArray.inheritsHelpersFrom('autoProfileField_fileCheck');
 // Template.autoProfileFieldHelper_editable.inheritsHelpersFrom('autoProfileField_string');
 
 // inherit default eventmap
@@ -113,6 +117,7 @@ Template.autoProfileField_image.inheritsEventsFrom('autoProfileField_string');
 Template.autoProfileField_file.inheritsEventsFrom('autoProfileField_string');
 Template.autoProfileField_fileCheck.inheritsEventsFrom('autoProfileField_string');
 Template.autoProfileField_fileCheckArray.inheritsEventsFrom('autoProfileField_fileCheck');
+Template.autoProfileField_fileArray.inheritsEventsFrom('autoProfileField_fileCheck');
 Template.autoProfileField_date.inheritsEventsFrom('autoProfileField_string');
 Template.autoProfileField_string_textarea.inheritsEventsFrom('autoProfileField_string');
 Template.autoProfileField_array.inheritsEventsFrom('autoProfileField_string');

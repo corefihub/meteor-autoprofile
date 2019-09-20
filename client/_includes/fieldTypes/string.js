@@ -7,7 +7,7 @@ import toastr from "toastr";
 
 import {SimpleSchemaFunctions} from "meteor/d3k4y:meteor-simple-schema-functions";
 
-import {dbg, getData, getOptions, getContext, unifyNamespace, getNamespaceContext, getFieldValue, getTemplate, getCollectionByName} from '../_api';
+import {getCollectionByName, getContext, getFieldValue, getOptions} from '../_api';
 
 
 Template.autoProfileField_string.helpers({
@@ -39,6 +39,13 @@ Template.autoProfileField_string.helpers({
         if (options) {
             return options.editingEnabled;
         }
+    },
+    enumerateFiles() {
+        // TODO not static return, but via input param
+        return false;
+    },
+    plusOne(number) {
+        return number + 1;
     },
     fieldTitle() {
         const profileOptions = getOptions(Template.instance());
