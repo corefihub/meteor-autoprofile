@@ -9,7 +9,7 @@ Package.onUse((api) => {
     api.versionsFrom("1.9");
 
     api.use([
-        "blaze-html-templates",
+        "blaze-html-templates@1.1.2",
         'check',
         'ecmascript',
         'tracker',
