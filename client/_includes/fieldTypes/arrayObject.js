@@ -1,6 +1,6 @@
 /* eslint-disable meteor/template-names */
 import {Template} from "meteor/templating";
-import {_} from "meteor/erasaur:meteor-lodash";
+import _ from "lodash";
 
 import {getFieldValue, getTemplate} from "../_api";
 

@@ -1,6 +1,7 @@
 /* eslint-disable consistent-return */
 import {Template} from "meteor/templating";
-import {_} from "meteor/erasaur:meteor-lodash";
+import {check, Match} from "meteor/check";
+import _ from "lodash";
 import {SimpleSchemaFunctions} from "meteor/d3k4y:meteor-simple-schema-functions";
 
 import {getOptions, getTemplate} from "./_api";
@@ -28,5 +29,18 @@ Template.autoProfilePanel.helpers({
     },
     doShowLoadingSpinner() {
         return Template.instance().data.showLoadingSpinner();
+    }
+});
+
+
+Template.autoProfilePanelCardHeaderMenu.onCreated(function onCreated() {
+    check(this.data.linkClass, Match.Optional(String));
+    check(this.data.labelIcon, String);
+    check(this.data.linkTooltip, Match.Optional(String));
+    check(this.data.linkCallback, Function);
+});
+Template.autoProfilePanelCardHeaderMenu.events({
+    "click a.js-card-header-menu__link"(event, templateInstance) {
+        templateInstance.data.linkCallback();
     }
 });

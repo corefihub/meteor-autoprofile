@@ -2,7 +2,7 @@
 import {Meteor} from "meteor/meteor";
 import {Blaze} from "meteor/blaze";
 import {Template} from 'meteor/templating';
-import {_} from "meteor/erasaur:meteor-lodash";
+import _ from "lodash";
 import toastr from "toastr";
 
 import {SimpleSchemaFunctions} from "meteor/d3k4y:meteor-simple-schema-functions";

@@ -1,6 +1,6 @@
 import {Blaze} from "meteor/blaze";
 import {AutoForm} from 'meteor/aldeed:autoform';
-import {_} from "meteor/erasaur:meteor-lodash";
+import _ from "lodash";
 
 
 function executeCallback(type, context, args, rtrn = null) {

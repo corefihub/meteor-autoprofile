@@ -34,7 +34,6 @@ Template.autoProfileField_fileArray.helpers({
         if (typeof this.getIconType === 'function') {
             const collection = window.Files;
             const file = collection.findOne({_id: value});
-            console.warn(`asdf: file: `, file);
             return this.getIconType(file);
         }
         return "";

@@ -1,7 +1,7 @@
 /* eslint-disable consistent-return,default-case,no-case-declarations */
 import moment from "moment/moment";
 import {SimpleSchemaGroup} from "simpl-schema";
-import {_} from "meteor/erasaur:meteor-lodash";
+import _ from "lodash";
 
 import {SimpleSchemaFunctions} from "meteor/d3k4y:meteor-simple-schema-functions";
 

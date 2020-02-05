@@ -21,11 +21,19 @@
             {{> DynamicTemplate template=getTemplate data=this}}
           {{/if}}
         {{else}}
-          {{panelTitle}}
           {{#if icon}}
-            <i class="fa fa-{{icon}} fa-1x"></i>
+            <span class="icon {{icon}}"></span>
           {{/if}}
+          {{panelTitle}}
         {{/with}}
+        {{#if headerMenu}}
+          <div class="card-header__menu">
+            {{#each headerMenu}}
+              {{> autoProfilePanelCardHeaderMenu this}}
+            {{/each}}
+          </div>
+
+        {{/if}}
       </div>
 
       {{#if valueOnly}}
@@ -131,4 +139,14 @@
 
     </div>
   {{/if}}
+</template>
+
+<template name="autoProfilePanelCardHeaderMenu">
+  <a href="#" class="card-header-menu__link js-card-header-menu__link {{linkClass}}"
+     data-toggle="tooltip"
+     data-placement="bottom"
+     data-title="{{linkTooltip}}"
+  >
+    <span class="icon {{labelIcon}}"></span>
+  </a>
 </template>

@@ -146,3 +146,9 @@
   top: 0;
   left: 0;
 }
+
+.card-header__menu {
+  display: inline-block;
+  float: right;
+  margin-right: 0.5rem;
+}
