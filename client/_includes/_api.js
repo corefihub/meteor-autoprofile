@@ -1,4 +1,4 @@
-/* eslint-disable consistent-return,default-case,no-case-declarations */
+/* eslint-disable consistent-return,no-case-declarations */
 import moment from "moment/moment";
 import {SimpleSchemaGroup} from "simpl-schema";
 import _ from "lodash";
