@@ -6,7 +6,7 @@ Package.describe({
 });
 
 Package.onUse((api) => {
-    api.versionsFrom("1.9");
+    api.versionsFrom("1.10");
 
     api.use([
         "blaze-html-templates@1.1.2",

@@ -1,6 +1,8 @@
+import _ from "lodash";
+import $ from "jquery";
+
 import {Blaze} from "meteor/blaze";
 import {AutoForm} from 'meteor/aldeed:autoform';
-import _ from "lodash";
 
 
 function executeCallback(type, context, args, rtrn = null) {
