@@ -2,16 +2,14 @@
   {{#if fieldValue}}
     <img id="autoprofile-field-{{fieldId}}"
          data-field-id="{{fieldId}}"
-         class="autoprofile-field js-autoprofile-field {{#if isEditable}}editable{{/if}}"
-         src="/cdn/storage/{{fieldValue._collectionName}}/{{fieldValue._id}}/original/{{fieldValue._id}}.{{fieldValue.extension}}"
-         width="320" />
+         class="autoprofile-field autoprofile-field__field-value js-autoprofile-field {{#if isEditable}}editable{{/if}}"
+         src="/cdn/storage/{{fieldValue._collectionName}}/{{fieldValue._id}}/original/{{fieldValue._id}}.{{fieldValue.extension}}" />
   {{else}}
     {{#if placeholder}}
       <img id="autoprofile-field-{{fieldId}}"
            data-field-id="{{fieldId}}"
-           class="autoprofile-field js-autoprofile-field {{#if isEditable}}editable{{/if}}"
-           src="{{placeholder}}"
-           width="320" /> <!--nobody.jpg-->
+           class="autoprofile-field autoprofile-field__placeholder js-autoprofile-field {{#if isEditable}}editable{{/if}}"
+           src="{{placeholder}}" /> <!--nobody.jpg-->
     {{else}}
       <div class="card card-default">
         <div id="autoprofile-field-{{fieldId}}"

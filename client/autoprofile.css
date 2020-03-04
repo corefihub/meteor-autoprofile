@@ -108,6 +108,9 @@
 .autoprofile-container .autoprofile-field.editable {
   cursor: pointer;
 }
+.autoprofile-container .autoprofile-field.editable:hover {
+  opacity: 0.8;
+}
 
 
 .autoprofile-container .card .autoprofile-field.editable .btn.js-autoprofile-remove-array-item {
