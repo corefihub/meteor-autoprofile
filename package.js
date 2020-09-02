@@ -1,12 +1,12 @@
 Package.describe({
     summary: "Generate profile pages / data-sheets based on simpl-schema",
-    version: "0.1.10",
+    version: "0.1.11",
     name: "sebl29:meteor-autoprofile",
     git: "https://github.com/sebl29/meteor-autoprofile"
 });
 
 Package.onUse((api) => {
-    api.versionsFrom("1.9");
+    api.versionsFrom('1.10.2');
 
     api.use([
         "blaze-html-templates@1.1.2",
@@ -33,5 +33,5 @@ Package.onUse((api) => {
         'babrahams:editable-text@0.9.10',
     ], ['client', 'server'], {weak: true});
 
-    api.mainModule('client.js', 'client');
+    api.mainModule('./client.js', 'client');
 });
