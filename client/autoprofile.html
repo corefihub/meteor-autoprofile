@@ -20,6 +20,7 @@
       {{/if}}
 
       {{#afModal  formId=getEditFormId
+                  beforeTemplateName=""
                   fields=getFields
                   collection=getCollectionName
                   meteormethod=getMethod
@@ -41,6 +42,7 @@
       }}<span class="icon-user"></span> Profil bearbeiten{{/afModal}}
 
       {{#afModal  formId="AutoProfileAddArrayItemForm"
+                  beforeTemplateName=""
                   fields=getFields
                   collection=getCollectionName
                   meteormethod=getMethod
@@ -57,6 +59,7 @@
       }}<span class="icon-user"></span> Hinzufügen{{/afModal}}
 
       {{#afModal  formId="AutoProfileCreateReferenceDocAndAddArrayItemForm"
+                  beforeTemplateName=""
                   fields=getFields
                   collection=getCollectionName
                   meteormethod=getMethod

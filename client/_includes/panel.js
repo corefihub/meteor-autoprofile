@@ -2,7 +2,7 @@
 import {Template} from "meteor/templating";
 import {check, Match} from "meteor/check";
 import _ from "lodash";
-import {SimpleSchemaFunctions} from "meteor/d3k4y:meteor-simple-schema-functions";
+import {SimpleSchemaFunctions} from "meteor/sebl29:meteor-simple-schema-functions";
 
 import {getOptions, getTemplate} from "./_api";
 

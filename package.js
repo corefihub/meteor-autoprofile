@@ -6,7 +6,7 @@ Package.describe({
 });
 
 Package.onUse((api) => {
-    api.versionsFrom('1.10.2');
+    api.versionsFrom('1.11.1');
 
     api.use([
         "blaze-html-templates@1.1.2",
@@ -15,7 +15,7 @@ Package.onUse((api) => {
         'tracker',
         'reactive-var',
         'aldeed:template-extension@4.1.0',
-        'd3k4y:meteor-simple-schema-functions@0.0.1',
+        'sebl29:meteor-simple-schema-functions@0.0.2',
     ]);
 
     api.use([
@@ -23,7 +23,7 @@ Package.onUse((api) => {
     ], 'client');
     api.use([
         'aldeed:autoform@6.3.0',
-        'd3k4y:autoform-modals@0.4.3',
+        'sebl29:autoform-modals@0.5.0',
         'd3k4y:files@1.10.0',
         'd3k4y:autoform-files@2.3.0',
         'corefi:meteor-autoform-enhanced-method@0.0.1',

@@ -5,7 +5,7 @@ import {Template} from 'meteor/templating';
 import _ from "lodash";
 import toastr from "toastr";
 
-import {SimpleSchemaFunctions} from "meteor/d3k4y:meteor-simple-schema-functions";
+import {SimpleSchemaFunctions} from "meteor/sebl29:meteor-simple-schema-functions";
 
 import {getCollectionByName, getContext, getFieldValue, getOptions} from '../_api';
 
