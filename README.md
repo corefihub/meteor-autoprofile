@@ -13,7 +13,7 @@
 
 ## Installation
 
-    $ meteor add corefi:meteor-autoprofile
+    $ meteor add corefihub:meteor-autoprofile
     
 There are some optional dependencies that you could install to extend the functionality (at least one of them is required to enable editing):
 

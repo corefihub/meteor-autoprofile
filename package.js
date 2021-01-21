@@ -1,8 +1,8 @@
 Package.describe({
     summary: "Generate profile pages / data-sheets based on simpl-schema",
     version: "0.1.12",
-    name: "corefi:meteor-autoprofile",
-    git: "https://github.com/sebl29/meteor-autoprofile"
+    name: "corefihub:meteor-autoprofile",
+    git: "https://github.com/corefihub/meteor-autoprofile"
 });
 
 Package.onUse((api) => {
