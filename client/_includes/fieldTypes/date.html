@@ -1,3 +1,7 @@
 <template name="autoProfileField_date">
-  <span id="autoprofile-field-{{fieldId}}" class="autoprofile-field js-autoprofile-field" data-field-id="{{fieldId}}">{{fieldValue}}</span>
+  <span id="autoprofile-field-{{fieldId}}"
+        class="autoprofile-field js-autoprofile-field {{#if isClickable}}clickable{{/if}}"
+        data-field-id="{{fieldId}}">
+    {{fieldValue}}
+  </span>
 </template>

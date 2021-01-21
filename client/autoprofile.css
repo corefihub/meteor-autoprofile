@@ -105,10 +105,12 @@
   color: #FFFFFF;
 }
 
-.autoprofile-container .autoprofile-field.editable {
+.autoprofile-container .autoprofile-field.editable,
+.autoprofile-container .autoprofile-field.clickable {
   cursor: pointer;
 }
-.autoprofile-container .autoprofile-field.editable:hover {
+.autoprofile-container .autoprofile-field.editable:hover,
+.autoprofile-container .autoprofile-field.clickable:hover {
   opacity: 0.8;
 }
 

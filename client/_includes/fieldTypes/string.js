@@ -1,6 +1,7 @@
 /* eslint-disable meteor/template-names,consistent-return */
 import {Meteor} from "meteor/meteor";
 import {Blaze} from "meteor/blaze";
+import {ReactiveDict} from 'meteor/reactive-dict';
 import {Template} from 'meteor/templating';
 import _ from "lodash";
 import toastr from "toastr";
@@ -8,8 +9,16 @@ import toastr from "toastr";
 import {SimpleSchemaFunctions} from "meteor/sebl29:meteor-simple-schema-functions";
 
 import {getCollectionByName, getContext, getFieldValue, getOptions} from '../_api';
+import {Tracker} from "meteor/tracker";
 
 
+Template.autoProfileField_string.onCreated(function onCreated() {
+    this.state = new ReactiveDict();
+    Tracker.autorun(() => {
+        const fieldValue = getFieldValue(this, this.data.id, this.data);
+        this.state.set("fieldValue", fieldValue);
+    });
+});
 Template.autoProfileField_string.helpers({
     options() {
         return getOptions(Template.instance());
@@ -65,7 +74,11 @@ Template.autoProfileField_string.helpers({
         const instance = Template.instance();
         const profileOptions = getOptions(instance);
         const context = getContext(instance);
-        const fieldValue = getFieldValue(instance, this.id || this, this);
+        // const fieldValue = getFieldValue(instance, this.id || this, this);
+        // if (!instance.state) return ""; // FIXME why does this happen to dates?!?
+        const fieldValue = instance.state
+            ? instance.state.get("fieldValue")
+            : getFieldValue(instance, this.id || this, this);
         const fieldSchema = SimpleSchemaFunctions.getFieldSchema(profileOptions.collection, this.id);
         const autoformOptions = _.get(fieldSchema, 'autoform.options');
         if (autoformOptions) {

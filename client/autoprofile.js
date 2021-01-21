@@ -26,6 +26,7 @@ import './_includes/fieldTypes/fileCheckArray.html';
 import './_includes/fieldTypes/fileCheckArray.js';
 import './_includes/fieldTypes/fileArray.html';
 import './_includes/fieldTypes/fileArray.js';
+import './_includes/fieldTypes/date.js';
 import './_includes/fieldTypes/date.html';
 import './_includes/fieldTypes/object.html';
 import './_includes/fieldTypes/object.js';

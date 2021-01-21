@@ -84,7 +84,8 @@ AutoForm.addHooks(['AutoProfileEditForm_UpdateSet', 'AutoProfileEditForm_UpdateS
 AutoForm.addHooks(['AutoProfileEditForm_UpdateSetQuick'], {
     after: {
         enhancedmethod: function (foo, bar, bla) {
-            const parent = $(this.template.firstNode.parentNode);
+            const parentNode = _.get(this, "template.firstNode.parentNode");
+            const parent = $(parentNode);
             const field = parent.find('.autoprofile-field');
             field.removeClass('d-none');
             const quickformTemplate = this.template.parent((instance) => { return instance.view.name === 'Template.quickForm'; });
